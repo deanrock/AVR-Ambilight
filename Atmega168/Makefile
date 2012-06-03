@@ -3,7 +3,7 @@
 # Tabsize: 4
 # This Revision: $Id$
 
-DEVICE  = atmega168
+DEVICE  = m16u2
 F_CPU   = 16000000	# in Hz
 FUSE_L  = 0xdf# see below for fuse values for particular devices
 FUSE_H  = 0xde
