@@ -3,7 +3,7 @@
 # Tabsize: 4
 # This Revision: $Id$
 
-DEVICE  = m16u2
+DEVICE  = m168
 F_CPU   = 16000000	# in Hz
 FUSE_L  = 0xdf# see below for fuse values for particular devices
 FUSE_H  = 0xde
