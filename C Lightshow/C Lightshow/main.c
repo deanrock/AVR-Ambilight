@@ -152,7 +152,7 @@ void getSpectrum(void *fm) {
 
 		max=0;
 
-		WaitForSingleObject(spectrumMutex, 1);
+		WaitForSingleObject(spectrumMutex, INFINITE);
 		for(i =0;i<5;i++) {
 			t[i]=t[i]/1600+150;
 			
@@ -167,7 +167,7 @@ void getSpectrum(void *fm) {
 		FMOD_System_Update(fmod);
 		Sleep(10);
 
-		WaitForSingleObject(stopAppMutex, 1);
+		WaitForSingleObject(stopAppMutex, INFINITE);
 		if(_stopApp==TRUE) {break;}
 		ReleaseMutex(stopAppMutex);
 	}while(1);
@@ -292,7 +292,7 @@ int main() {
 			buf[2+i*3]=0x00;
 		}
 
-		WaitForSingleObject(spectrumMutex, 1);
+		WaitForSingleObject(spectrumMutex, INFINITE);
 		for( i =0;i<5;i++) {
 			diff = abs((analyzedSpectrum[i]/10-previousAnalyzedSpectrum[i]/10)*10);
 
